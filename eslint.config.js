@@ -12,6 +12,7 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
+      eslintPluginPrettierRecommended,
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -41,5 +42,5 @@ module.exports = tseslint.config(
     ],
     rules: {},
   },
-  eslintPluginPrettierRecommended,
+  
 );
