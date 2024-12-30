@@ -3,6 +3,7 @@ const eslint = require("@eslint/js");
 const tseslint = require("typescript-eslint");
 const angular = require("angular-eslint");
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');
+const storybook = require('eslint-plugin-storybook');
 
 module.exports = tseslint.config(
   {
@@ -13,6 +14,7 @@ module.exports = tseslint.config(
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
       eslintPluginPrettierRecommended,
+      ...storybook.configs['flat/recommended'],
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -42,5 +44,7 @@ module.exports = tseslint.config(
     ],
     rules: {},
   },
-  
+  {
+    ignores: ['!.storybook'],
+  },
 );

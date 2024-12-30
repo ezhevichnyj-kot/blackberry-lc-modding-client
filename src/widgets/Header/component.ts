@@ -7,6 +7,4 @@ import { ThemeButtonComponent } from "@/components";
     styleUrl: './component.css',
     imports: [ThemeButtonComponent],
 })
-export class HeaderComponent {
-
-};
+export class HeaderComponent {};
