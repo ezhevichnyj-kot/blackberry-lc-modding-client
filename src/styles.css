@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    transition: all 0.5s;
+}
+
+html[data-theme='light'] {
+    @apply bg-zinc-400;
+}
+
+html[data-theme='dark'] {
+    @apply bg-zinc-800;
+}
+
+html[data-theme='dark'] .themeChanger{
+    @apply bg-[url('/Moon.svg')] bg-black;
+}
+
+html[data-theme='light'] .themeChanger{
+    @apply bg-[url('/Sun.svg')] bg-white;
+}

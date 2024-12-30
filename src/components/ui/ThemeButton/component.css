@@ -1,0 +1,19 @@
+.ThemeButton {
+    @apply w-8 aspect-square bg-center bg-no-repeat rounded-full drop-shadow-sm overflow-hidden;
+    transition: transform 0.1s;
+}
+
+.ThemeButton:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+html[data-theme='light'] .ThemeButton {
+    background-image: url('/Sun.svg');
+    @apply bg-white;
+}
+
+html[data-theme='dark'] .ThemeButton {
+    background-image: url('/Moon.svg');
+    @apply bg-black;
+}

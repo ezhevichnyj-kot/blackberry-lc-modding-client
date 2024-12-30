@@ -1,0 +1,1 @@
+export { GlowEffectComponent } from './GlowEffect';

@@ -1,0 +1,3 @@
+.settings-panel {
+    @apply flex flex-row-reverse gap-2 p-2;
+}

@@ -1,0 +1,28 @@
+.glow-component {
+    @apply w-full h-full;
+}
+
+.glow-wrap{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  
+.glow-component .glow{
+    display: block;
+    position:absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,.4);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+  
+.glow-component:hover .glow{
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
